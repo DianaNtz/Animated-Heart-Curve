@@ -1,4 +1,4 @@
 """
-@author: Diana
+@author: Diana Nitzschke
 """
 
