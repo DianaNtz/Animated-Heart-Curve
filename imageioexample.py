@@ -19,4 +19,11 @@ for i in range(0,n):
     plt.xticks(fontsize= 16) 
     plt.yticks(fontsize= 16)
     plt.legend(loc=1,fontsize= 16)
-    plt.show()   
+    filename ='bla{0:.0f}.png'.format(i)
+    filenames.append(filename)
+    plt.savefig(filename,dpi=250)
+    plt.close()
+with imageio.get_writer('Herz.gif', mode='I') as writer:
+    for filename in filenames:
+        image = imageio.imread(filename)
+        writer.append_data(image) 
