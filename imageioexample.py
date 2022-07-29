@@ -27,3 +27,5 @@ with imageio.get_writer('Herz.gif', mode='I') as writer:
     for filename in filenames:
         image = imageio.imread(filename)
         writer.append_data(image) 
+for filename in set(filenames):
+    os.remove(filename)        
