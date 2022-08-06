@@ -26,7 +26,7 @@ for i in range(0,n):
     #append file name to the list filename
     filenames.append(filename)
     #save the plot
-    plt.savefig(filename,dpi=250)
+    plt.savefig(filename,dpi=100)
     plt.close()
 #build the gif
 with imageio.get_writer('Herz.gif', mode='I') as writer:
